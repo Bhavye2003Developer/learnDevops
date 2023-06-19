@@ -1,0 +1,11 @@
+version: '3.1'
+# services is a type of container
+services:
+  redis-server:
+    image: 'redis'
+    restart: on-failure # if the container crashes, it will restart
+  redis-django-app:
+    restart: always # if the container crashes, it will restart
+    build: .  
+    ports:
+      - '5000:8000'

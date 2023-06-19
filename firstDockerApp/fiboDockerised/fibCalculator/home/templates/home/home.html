@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Calculator</title>
+</head>
+
+<body>
+    <center style="margin-top: 50px;">
+        <h1>Enter Index for getting fibonacci number : </h1>
+        <form action="{% url 'home' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="number" placeholder="Enter index"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+</body>
+
+</html>
